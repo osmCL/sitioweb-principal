@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("../fonts/HelveticaNeueBold.ttf") format('truetype'); 
+    }
+
+@font-face {
+  font-family: "Helvetica Light";
+  src: url("../fonts/Helvetica-Light.ttf") format('truetype');
+    }
+
+body {
+  margin:0px 0px;
+  padding:0px 0px;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  font-family: 'Open Sans',arial,sans-serif;
+}
+
+.container {
+  width:100%;
+  height:100%;
+  margin-top:0px;
+  margin-left:0px;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  display:inherit;
+  z-index:1;
+  position:absolute;
+}
+
+.mapa {
+  width:100%;
+  height:100%;
+  margin-top:0px;
+  margin-left:0px;
+  top:0px;
+  left:0px;
+  bottom:0px;
+}
+
+
+/* Menú Principal */
+
+.menu{
+  position:absolute;
+  z-index:999;
+  top:0px;
+  background-color:rgba(6, 46, 99, 0.9);
+  height:64px;
+  width:100%;
+  box-shadow: 0 1px 4px #555;
+}
+
+.menu h1 {
+  font-family: 'Helvetica Light', sans-serif;
+  font-size: 24px;
+  font-weight:normal;
+  margin-left:54px;
+  margin-top:16px;
+  color: #4a8bc0;
+  height:24px;
+  float:left;
+}
+
+.menu h1 .negrita {
+  font-family: 'Helvetica Bold', sans-serif;
+  font-weight:normal;
+  font-size:24px;
+  color: #ffffff;
+}
+
+.menu .botones {
+     float:right;
+     margin-right:25px;
+     margin-top:20px;
+     margin-bottom:auto;
+}
+
+.menu .botones a {
+     margin-left:30px;
+     font-family: 'Roboto', sans-serif;
+     text-transform: uppercase;
+     font-weight: 500;
+     color: #ffffff;
+     text-decoration: none;
+     font-size: 14px;
+}
+
+.menu .botones a:hover {
+     color: #4a8bc0;
+}
+
+.menu .botones .org {
+     color: #4a8bc0;
+}
+
+.menu .botones a .botonresponsivo {
+     margin-left:0;
+  }
+
+
+/* Mover el logotipo en caso de pantalla pequeña */
+
+@media screen and (max-width:400px) {
+
+.menu h1 {
+  margin-left:10px;
+}
+.menu .botones {
+  width:24px;
+}
+}
+
+/* Parte de la magia responsiva */
+
+ul.botones {
+    list-style-type: none;
+}
+
+ul.botones li {
+    float: left;
+}
+
+ul.botones li.icon {
+    display: none;
+}
+
+/* La verdadera magia */
+
+@media screen and (max-width:900px) {
+  ul.botones li {display: none;}
+  ul.botones li.icon {
+    float: right;
+    display: inline-block;
+    width:24px;
+  }
+  .menu .botones .icon a {
+    margin-left:0px ! important;
+  } 
+}
+
+@media screen and (max-width:900px) {
+  ul.botones.responsive {
+    position: relative;
+    background-color:rgba(21,72,123, 0.9);
+    margin-top:14px;
+    width:60%;
+    overflow: auto;
+  }
+  ul.botones.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.botones.responsive li {
+    float: none;
+    display: inline;
+    margin-left:-40px;
+  }
+  ul.botones.responsive li a {
+    display: block;
+    text-align: left;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+}
+
+/************************/
+/* Modifica CSS externo */
+/************************/
+
+.leaflet-left {
+      margin-top:84px;
+}
+
+.leaflet-right {
+      margin-top:84px;
+      margin-left:20px;
+}
+
+.leaflet-control-layers {
+      margin-top: 10px;
+}
+
+.leaflet-control-locate {
+      margin-top:10px ! important;
+}
+
+.leaflet-control-attribution {
+      font-family: 'Roboto', sans-serif;
+      background-color: #15487b ! important;
+      color: #ffffff ! important;
+      font-size:11px;
+}
+
+.leaflet-control-attribution a {
+      color: #ffffff ! important;
+      text-decoration: none;
+}
+
+.leaflet-routing-container {
+      background-color: #ffffff;
+}
+
+.leaflet-routing-alternatives-container {
+      padding:10px;
+}
+
+
